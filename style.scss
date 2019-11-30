@@ -1,0 +1,929 @@
+$black-color: #131313;
+$yellow-color: #E3B873;
+
+
+@font-face {
+    font-family: 'FuturaBookC';
+    src: url("./assests/fonts/futurabookc.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'FuturaMediumC';
+    src: url("./assests/fonts/FuturaDemiC.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Yeseva One";
+    src: url("./assests/fonts/YesevaOne-Regular_v2.otf") format("opentype");
+}
+
+
+@font-face {
+    font-family: 'FuturaDemiC';
+    src: url("./assests/fonts/FuturaDemiC.ttf") format("opentype");
+}
+
+@font-face{
+    font-family: "Proxima Nova";
+    src: url("./assests/fonts/Proxima_Nova.otf") format("opentype");
+}
+
+::placeholder {
+    font-family: FuturaMediumC;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    background: red;
+    height: 10000px;
+}
+
+
+.header {
+    display: flex;
+    margin: 0;
+}
+
+.instagram {
+    background: $black-color;
+    display: flex;
+
+    &--text {
+        margin: auto;
+        transform: rotate(90deg);
+        color: $yellow-color;
+    }
+}
+
+.center {
+    flex-grow: 2;
+}
+
+
+.navbar {
+    background-color: $black-color;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    padding-top: 15px;
+    font-size: 1.2rem;
+
+    &--repair_item {
+        flex-grow: 1;
+        color: $yellow-color;
+    }
+
+    &--unorderedlist {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &--select {
+        font-family: FuturaBookC;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        list-style-type: none;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &--select:hover {
+        color: $yellow-color;
+    }
+
+    &--tel {
+        text-decoration: underline;
+        color: $yellow-color;
+        flex-grow: 1;
+    }
+
+    &--req {
+        flex-grow: 1;
+        background-color: $yellow-color;
+        border: none;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    &--req:hover {
+        cursor: pointer;
+        background-color: lighten($yellow-color, 10%);
+    }
+
+
+
+
+}
+
+
+.image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url('./assests/img/image\ 4.3.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 707px;
+    display: grid;
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+
+    &--caption {
+        grid-area: 5 / 2 /span 4 /span 5;
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        &-yellow {
+            color: $yellow-color;
+        }
+    }
+
+    &--paraghraph {
+        grid-area: 7 / 2 /span 4 /span 5;
+        font-family: FuturaBookC;
+        font-size: 22px;
+        line-height: 30px;
+        color: #FFFFFF;
+    }
+
+    &--button1 {
+        grid-area: 10 / 2 /span 1 /span 2;
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: 2px white solid;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+        color: white;
+        text-transform: uppercase;
+
+    }
+
+    &--button1:hover,
+    &--button2:hover {
+        background-color: $yellow-color;
+        color: black;
+        border: none;
+        box-shadow: 0px 0px 24px -6px rgba(250, 242, 92, 1);
+    }
+
+    &--button2 {
+        grid-area: 10 / 5 /span 1 /span 2;
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: 2px white solid;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+        color: white;
+        text-transform: uppercase;
+
+    }
+}
+
+.scroll {
+    background-color: $black-color;
+    grid-area: 12 / 1 / span 2 / span 2;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 247px;
+    height: 97px;
+
+    top: 47%;
+    right: 27%;
+
+    &--text {
+        color: white;
+        align-self: center;
+    }
+
+    &--button {
+        display: inline;
+        align-self: center;
+    }
+}
+
+.section1 {
+    background-image: url('./assests/img/Group\ 21.1.png');
+    width: 100%;
+    height: 1073px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+
+    &--divison1 {
+        // background-color: yellow;
+        flex-grow: 1;
+        // background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    &--element {
+        // background-color: grey;
+        width: 30rem;
+        height: 29rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--element-main {
+        display: flex;
+        flex-wrap: wrap;
+        // background-color: black;
+        // flex-grow: 1;
+
+        &-caption {
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 37px;
+            letter-spacing: -0.07em;
+            text-transform: uppercase;
+            color: $yellow-color;
+            align-self: center;
+        }
+
+        &-paraghraph {
+            font-family: FuturaBookC;
+            font-size: 18px;
+            line-height: 29px;
+            color: #FFFFFF;
+        }
+    }
+
+    &--element-secondary {
+
+        display: flex;
+        // flex-grow: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+
+        &-mini {
+            width: 50%;
+            height: 50%;
+        }
+
+        &-mini-caption {
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: uppercase;
+            color: #E3B873;
+        }
+
+        &-mini-paraghraph {
+            font-family: FuturaBookC;
+            font-size: 15px;
+            line-height: 20px;
+            color: #FFFFFF;
+        }
+    }
+
+
+    &--divison2 {
+        display: grid;
+        overflow: hidden;
+        grid-template: repeat(12, 1fr)/ repeat(12, 1fr);
+    }
+
+    &--divison2-list {
+        width: 40rem;
+        grid-area: 3 / 1 /span 3 / span 5;
+    }
+
+    &--divison2-unoreder-list {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &--divison2-anchors {
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    &--divison2-anchors:hover {
+        text-decoration: underline;
+        color: #E3B873;
+    }
+
+    &--divison2-pictures {
+        display: flex;
+
+        width: 1353px;
+        height: 482px;
+        grid-area: 4/1/span 10/span 10;
+    }
+
+    &--divison2-picture1 {
+        grid-area: 4/1/span 10/span 10;
+        width: 100%;
+        height: auto;
+    }
+
+    &--divison2-picture2 {
+
+        width: 100%;
+        height: auto;
+    }
+
+    &--divison2-left {
+        grid-area: 6/12/span 2/span 2;
+        position: relative;
+        right: 15px;
+
+    }
+
+    &--divison2-online-control {
+        /* online control */
+
+        grid-area: 10/2/span 2 /span 2;
+        width: 15rem;
+        font-family: Yeseva One;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+    }
+
+}
+
+
+.section2 {
+    width: 100%;
+    height: 2200px;
+    background-color: white;
+
+    display: grid;
+    grid-template: repeat(12, 1fr)/ repeat(12, 1fr);
+
+    &--repair-video {
+        position: relative;
+        bottom: 12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        align-items: center;
+        grid-area: 1 / 5 / span 3 / span 6;
+        width: 45rem;
+        height: 33rem;
+
+        &-text {
+            width: 43rem;
+            font-family: FuturaBookC;
+            font-size: 20px;
+            line-height: 34px;
+            text-align: center;
+            color: #363636;
+
+            &-hr {
+                /* Rectangle 6.9 */
+                width: 100px;
+                border-top: 3px solid #E3B873;
+                border-radius: 15%;
+                border-bottom: 0;
+
+            }
+
+        }
+    }
+
+    &--forms {
+        // background-color: yellow;
+        width: 750px;
+        height: 450px;
+        grid-area: 3 / 5 / span 3 / span 6;
+
+        &-itself {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+
+
+            &-input-text {
+                border: 0;
+                border-bottom: 1px solid rgb(182, 172, 172);
+                background-color: transparent;
+                font-family: FuturaBookC;
+                font-size: 18px;
+                line-height: 24px;
+                color: #363636;
+            }
+
+            &-label {
+                font-family: FuturaBookC;
+                font-size: 15px;
+                line-height: 20px;
+
+                color: rgba(54, 54, 54, 0.5);
+            }
+
+            &-input-sumbit {
+                background-color: $yellow-color;
+                width: 250px;
+                height: 50px;
+                padding: 0;
+                border: 0;
+                cursor: pointer;
+                overflow: hidden;
+                outline: none;
+                font-family: FuturaDemiC;
+                font-size: 15px;
+                line-height: 26px;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+            }
+
+            &-input-sumbit:hover {
+                box-shadow: 0px 0px 75px 5px rgb(238, 226, 7);
+
+            }
+
+            &-divs4 {
+                flex-grow: 2;
+                align-self: center;
+                // background-color: green;
+                font-family: FuturaBookC;
+                font-size: 16px;
+                line-height: 22px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+            }
+
+
+        }
+    }
+
+    &--choices {
+        grid-area: 4/2/span 4/ span 12;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        &-caption {
+            margin: 2rem;
+            font-family: Yeseva One;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+
+
+        &-blocks {
+
+            max-width: 1236px;
+            max-height: 608px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            &-ul {
+                position: relative;
+                top: 9rem;
+                background-color: white;
+                // width: 300px;
+                // height: 256px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+                padding: 1.875rem;
+                list-style-type: disc;
+                flex-shrink: 1;
+
+            }
+
+            &-headers {
+
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 1.125rem;
+                line-height: 1, 5625rem;
+                color: #363636;
+            }
+
+            &-li {
+
+                font-family: FuturaBookC;
+                font-size: 1rem;
+                line-height: 1.56rem;
+                color: #959595;
+            }
+        }
+
+        &-block1 {
+            background-image: url("./assests/img/1.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 392px;
+            max-height: 421px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &-block2 {
+            background-image: url("./assests/img/2.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 392px;
+            max-height: 421px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &-block3 {
+            background-image: url("./assests/img/3.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            max-width: 392px;
+            max-height: 421px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &-buttons {
+            background-color: $yellow-color;
+            width: 250px;
+            height: 50px;
+            padding: 0;
+            border: 0;
+            cursor: pointer;
+            overflow: hidden;
+            outline: none;
+            font-family: FuturaDemiC;
+            font-size: 15px;
+            line-height: 26px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            position: relative;
+            top: 60px;
+        }
+
+        &-buttons:hover {
+            box-shadow: 0px 0px 75px 5px rgb(238, 226, 7);
+
+        }
+    }
+
+    &--elform {
+        grid-area: 8 / 1 /span 5 / span 12;
+        max-width: 1400px;
+        max-height: 700px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &--elblock {
+        display: grid;
+        grid-template: repeat(50, 1fr) / repeat(50, 1fr);
+
+        width: 800px;
+        height: 650px;
+
+
+
+        &-ellipse {
+            grid-area: 2 / 2 / span 2 / span 2;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background:
+                linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(to right, #fff 0%, #fff 20%, #fff 20%, #E3B873 100%) border-box;
+            border: 3px solid transparent;
+        }
+
+        &-elements {
+            width: 400px;
+
+
+            &-white-circle {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                background-color: white;
+                float: left;
+                z-index: 10;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &-numbers {
+                z-index: 10;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                background-color: $yellow-color;
+                border-radius: 100%;
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                text-align: center;
+                color: #FFFFFF;
+
+            }
+
+            &-texts {
+                z-index: 10;
+                font-family: FuturaMediumC;
+                font-size: 15px;
+                line-height: 21px;
+                color: #363636;
+            }
+
+        }
+
+        &-element1 {
+            grid-area: 5/30/span 8 / span 50;
+
+        }
+
+        &-element2 {
+            grid-area: 15/37/span 8 / span 50;
+        }
+
+        &-element3 {
+            grid-area: 30/37/span 8 / span 50;
+        }
+
+        &-element4 {
+            grid-area: 42/30/span 8 / span 50;
+        }
+
+        &-image {
+            grid-area: 1/10/span 30/ span 50;
+            max-width: 580px;
+            width: auto;
+            height: auto;
+            max-height: 580px;
+            z-index: 0;
+            opacity: 0.5;
+            ;
+        }
+    }
+
+    &-forms2 {
+
+        margin-top: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .bblocks {
+        background: brown;
+        background: black;
+        width: 509px;
+        height: 509px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &-caption {
+            font-family: FuturaDemiC;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            width: 50%;
+            color: #FFFFFF;
+        }
+    }
+
+    &--forms2 {
+        grid-area: 8 / 8 /span 5 / span 5;
+    }
+
+
+    &--pig {
+        width: 351px;
+        height: 72px;
+
+
+        grid-area: 12 / 9 /span 5 / span 5;
+        font-family: FuturaDemiC;
+        font-size: 20px;
+        color: #E3B873;
+        text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+        display: flex;
+        justify-content: space-evenly;
+
+        &-circl {
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #E3B873;
+            ;
+            border-radius: 100%;
+
+        }
+
+        &-text {
+            align-self: center;
+        }
+    }
+}
+
+.forms-itself {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &-input-text {
+        border: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        background-color: transparent;
+        font-family: FuturaMediumC;
+        font-size: 18px;
+        line-height: 25px;
+        color: white;
+        width: 25rem;
+    }
+
+    &-label {
+        font-family: FuturaBookC;
+        font-size: 15px;
+        line-height: 20px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &-input-sumbit {
+        background-color: $yellow-color;
+        width: 250px;
+        height: 50px;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+        font-family: FuturaDemiC;
+        font-size: 15px;
+        line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+    }
+
+    &-input-sumbit:hover {
+        box-shadow: 0px 0px 75px 5px rgb(238, 226, 7);
+
+    }
+
+    &-divs1 {
+        margin: 15px 0;
+    }
+
+    &-divs2 {
+        margin: 15px 0;
+    }
+
+    &-divs3 {
+        margin: 15px 0;
+        align-self: flex-end;
+    }
+
+    &-divs4 {
+        flex-grow: 2;
+        align-self: center;
+        font-family: FuturaBookC;
+        font-size: 16px;
+        line-height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+
+
+}
+
+.section3 {
+
+    max-width: 1440px;
+    width: 100%;
+    height: 864px;
+    background-image: url("./assests/img/Group 22.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+    &--left-sideblock {
+
+
+        &--h2 {
+            font-family: "Yeseva One";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 37px;
+            text-transform: uppercase;
+            color: #E3B873;
+        }
+
+        &--ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--li {
+            font-family: "Proxima Nova";
+            font-size: 20px;
+            line-height: 34px;
+            color: white;
+        }
+        &--li a{
+            color: #E3B873;
+        }
+
+
+    }
+
+}
